@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+input {
+  margin: 20px;
+}
+
+button {
+  margin: 20px;
+}
+
+.user-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user-card {
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  text-align: left;
+  padding: 20px;
+}
