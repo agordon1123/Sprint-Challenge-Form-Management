@@ -4,26 +4,26 @@ import * as Yup from 'yup';
 import Axios from 'axios';
 
 const LoginForm = ({ status, values }) => {
-    const [user, setUser] = useState([])
-    useEffect(() => {
-        if(status) {
-            setUser([...user, status])
-        }
-    }, [status])
+    // const [user, setUser] = useState([])
+    // useEffect(() => {
+    //     if(status) {
+    //         setUser([...user, status])
+    //     }
+    // }, [status])
     console.log('status: ', status)
-    console.log('user: ', user)
+    // console.log('user: ', user)
 
     return (
         <Form>
             {/* <p>Please enter your email:</p> */}
             <Field
                 type='text'
-                name='name'
-                placeholder='Email'
+                name='username'
+                placeholder='Username'
             />
             {/* <p>Please enter your password:</p> */}
             <Field
-                type='text'
+                type='password'
                 name='password'
                 placeholder='Password'
             />
@@ -33,16 +33,16 @@ const LoginForm = ({ status, values }) => {
 }
 
 const FormikLoginForm = withFormik({
-    mapPropsToValues({ email, password }) {
+    mapPropsToValues({ username, password }) {
         return {
-            email: email || '',
+            username: username || '',
             password: password || ''
         }
     },
 
     validationSchema: Yup.object().shape({
-        email: Yup.string()
-            .email('Email is required')
+        username: Yup.string()
+            .min(4, 'Username must be at least 4 characters')
             .required('Email is required'),
         password: Yup.string()
             .min(6, 'Password must be 6 characters or longer')
