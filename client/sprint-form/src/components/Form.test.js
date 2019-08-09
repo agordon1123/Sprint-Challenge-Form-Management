@@ -2,10 +2,10 @@ import React from 'react';
 import '@testing-library/react';
 import '@testing-library/react/cleanup-after-each';
 import { render } from '@testing-library/react';
-import Form from './Form';
+import LoginForm from './LoginForm';
 
-describe('<Form />', () => {
+describe('<LoginForm />', () => {
     it('renders without crashing', () => {
-        render(<Form />)
+        render(<LoginForm />)
     });
 });
