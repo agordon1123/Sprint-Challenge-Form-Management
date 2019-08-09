@@ -11,12 +11,18 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+    this.mounted = true;
     this.getUser();
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
   }
 
   getUser = () => {
     Axios.get('http://localhost:5000/api/restricted/data')
       .then(res => {
+        console.log(res)
         this.setState(res.data)
       })
       .catch(err => {

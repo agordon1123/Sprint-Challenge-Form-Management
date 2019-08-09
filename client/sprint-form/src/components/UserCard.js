@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UserCard = (props) => {
-    console.log(props.props)
+    console.log('UserCard props: ', props.props)
     return(
         <div className='user-list'>
             {Object.values(props.props).map(user => {
