@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import Axios from 'axios';
@@ -13,7 +13,6 @@ const LoginForm = ({ status, values }) => {
                 name='username'
                 placeholder='Username'
             />
-            
             <Field
                 type='password'
                 name='password'
@@ -41,7 +40,7 @@ const FormikLoginForm = withFormik({
             .required('Password is required')
     }),
 
-    handleSubmit(values, { setUser }) {
+    handleSubmit(values) {
         console.log(values)
         Axios.post('http://localhost:5000/api/register', values)
         .then(res => {

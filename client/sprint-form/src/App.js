@@ -7,7 +7,7 @@ import UserCard from './components/UserCard';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = []
+    this.state = {}
   };
 
   componentDidMount() {
@@ -17,7 +17,6 @@ class App extends React.Component {
   getUser = () => {
     Axios.get('http://localhost:5000/api/restricted/data')
       .then(res => {
-        console.log('getUser res: ', res)
         this.setState(res.data)
       })
       .catch(err => {

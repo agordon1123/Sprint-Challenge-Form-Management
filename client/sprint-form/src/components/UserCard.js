@@ -1,12 +1,10 @@
 import React from 'react';
 
 const UserCard = (props) => {
-    console.log("props in UserCard", props.props)
-    const userArray = Object.values(props.props);
-    console.log(userArray);
+    console.log(props.props)
     return(
         <div className='user-list'>
-            {userArray.map(user => {
+            {Object.values(props.props).map(user => {
                 return (
                     <div className='user-card'>
                         <p>Name: {user.name}</p>
