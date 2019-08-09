@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import LoginForm from './components/LoginForm';
 import Axios from 'axios';
-import UserList from './components/UserList';
+import UserCard from './components/UserCard';
 
 class App extends React.Component {
   constructor() {
@@ -30,7 +30,7 @@ class App extends React.Component {
       <div className="App">
         <h1>Create a login to access our secret recipes:</h1>
         <LoginForm />
-        <UserList props={this.state} />
+        <UserCard props={this.state} />
       </div>
     );
   }

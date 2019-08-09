@@ -4,24 +4,16 @@ import * as Yup from 'yup';
 import Axios from 'axios';
 
 const LoginForm = ({ status, values }) => {
-    // const [user, setUser] = useState([])
-    // useEffect(() => {
-    //     if(status) {
-    //         setUser([...user, status])
-    //     }
-    // }, [status])
     console.log('status: ', status)
-    // console.log('user: ', user)
 
     return (
         <Form>
-            {/* <p>Please enter your email:</p> */}
             <Field
                 type='text'
                 name='username'
                 placeholder='Username'
             />
-            {/* <p>Please enter your password:</p> */}
+            
             <Field
                 type='password'
                 name='password'

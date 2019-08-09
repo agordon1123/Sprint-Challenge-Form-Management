@@ -1,8 +1,8 @@
 import React from 'react';
 
 const UserCard = (props) => {
-    console.log("props in UserCard", props.props.props)
-    const userArray = Object.values(props.props.props);
+    console.log("props in UserCard", props.props)
+    const userArray = Object.values(props.props);
     console.log(userArray);
     return(
         <div className='user-list'>
